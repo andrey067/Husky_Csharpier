@@ -1,23 +1,36 @@
 {
   "$schema": "https://alirezanet.github.io/Husky.Net/schema.json",
-  "tasks": [
+  "tasks": [ 
     {
       "name": "Run csharpier",
       "command": "dotnet",
-      "args": [ "csharpier", "${staged}" ],
-      "include": [ "**/*.cs" ]
-    },  
+      "args": [
+        "csharpier",
+        "${staged}"
+      ],
+      "include": [
+        "**/*.cs"
+      ]
+    },
     {
       "name": "Run dotnet Restore",
       "command": "dotnet",
-      "args": [ "restore" ],
-      "include": [ "**/*.csproj" ]
-    }  ,
+      "args": [
+        "restore"
+      ],
+      "include": [
+        "**/*.csproj"
+      ]
+    },
     {
       "name": "Run dotnet build",
       "command": "dotnet",
-      "args": [ "build" ],
-      "include": [ "**/*.csproj" ]
+      "args": [
+        "build"
+      ],
+      "include": [
+        "**/*.csproj"
+      ]
     }
   ]
 }

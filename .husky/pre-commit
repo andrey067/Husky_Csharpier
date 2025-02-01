@@ -2,4 +2,4 @@
 . "$(dirname "$0")/_/husky.sh"
 
 echo 'pre-commit git hook'
-dotnet husky run
+dotnet husky run --name "Run csharpier"
