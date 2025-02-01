@@ -6,6 +6,18 @@
       "command": "dotnet",
       "args": [ "csharpier", "${staged}" ],
       "include": [ "**/*.cs" ]
+    },  
+    {
+      "name": "Run dotnet Restore",
+      "command": "dotnet",
+      "args": [ "restore" ],
+      "include": [ "**/*.csproj" ]
+    }  ,
+    {
+      "name": "Run dotnet build",
+      "command": "dotnet",
+      "args": [ "build" ],
+      "include": [ "**/*.csproj" ]
     }
   ]
 }
