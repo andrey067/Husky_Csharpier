@@ -1,0 +1,22 @@
+{
+  "name": "csharpier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/andrey067/Husky_Csharpier.git",
+  "author": "Audrey Ernesto de Lima <alima@inovvati.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "husky": "^9.1.7"
+  },
+  "scripts": {
+    "preinstall": "dotnet tool restore",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.cs": "dotnet format --include"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0"
+  }
+}

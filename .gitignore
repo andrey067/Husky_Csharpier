@@ -398,5 +398,13 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-*.dll
 
+# Solution
+docs/.vuepress/dist
+**/nupkg
+nupkg
+.temp
+nuget.config*
+.vscode
+!.husky/csx
+*.dll
