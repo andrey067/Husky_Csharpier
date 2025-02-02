@@ -15,5 +15,5 @@ max_line_length = 100
 [*.cst]
 csharpier_formatter = csharp
 indent_style = space
-indent_size = 4
+indent_size = 2
 max_line_length = 80
