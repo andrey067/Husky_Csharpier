@@ -11,19 +11,19 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// var summaries = new[]
-// {
-//     "Freezing",
-//     "Bracing",
-//     "Chilly",
-//     "Cool",
-//     "Mild",
-//     "Warm",
-//     "Balmy",
-//     "Hot",
-//     "Sweltering",
-//     "Scorching",
-// };
+var summaries = new[]
+{
+    "freezing",
+    "bracing",
+    "chilly",
+    "cool",
+    "mild",
+    "warm",
+    "balmy",
+    "hot",
+    "sweltering",
+    "scorching",
+};
 
 app.MapGet(
         "/weatherforecast",
@@ -42,7 +42,7 @@ app.MapGet(
     )
     .WithName("GetWeatherForecast");
 
-app.Run();
+await app.RunAsync();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
