@@ -5,10 +5,12 @@ repos:
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
+
 -   repo: https://github.com/psf/black
     rev: 22.10.0
     hooks:
     -   id: black
+
 -   repo: local
     hooks:
     -   id: changelogs-rst
@@ -16,9 +18,10 @@ repos:
         entry: changelog filenames must end in .rst
         language: fail
         files: 'changelog/.*(?<!\.rst)$'
-- repo: local
+
+-   repo: local
     hooks:
-      - id: dotnet-tool-restore
+    -   id: dotnet-restore
         name: Install .NET tools
         entry: dotnet tool restore
         language: system
@@ -30,10 +33,11 @@ repos:
           - post-checkout
           - post-rewrite
         description: Install the .NET tools listed at .config/dotnet-tools.json.
-      - id: csharpier
+
+    -   id: csharpier
         name: Run CSharpier on C# files
         entry: dotnet tool run dotnet-csharpier
         language: system
         types:
           - c#
-        description: CSharpier is an opinionated C# formatter inspired by Prettier.        
+        description: CSharpier is an opinionated C# formatter inspired by Prettier.
